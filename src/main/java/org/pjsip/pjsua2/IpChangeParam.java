@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class IpChangeParam {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
@@ -22,6 +21,7 @@ public class IpChangeParam {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

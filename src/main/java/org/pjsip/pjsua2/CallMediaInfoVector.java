@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL*/
 public class CallMediaInfoVector extends java.util.AbstractList<CallMediaInfo> implements java.util.RandomAccess {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
@@ -22,6 +21,7 @@ public class CallMediaInfoVector extends java.util.AbstractList<CallMediaInfo> i
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL*/
 public class CodecFmtpVector extends java.util.AbstractList<CodecFmtp> implements java.util.RandomAccess {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
@@ -22,6 +21,7 @@ public class CodecFmtpVector extends java.util.AbstractList<CodecFmtp> implement
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

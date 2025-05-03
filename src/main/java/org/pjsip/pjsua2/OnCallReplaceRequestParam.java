@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class OnCallReplaceRequestParam {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
@@ -22,6 +21,7 @@ public class OnCallReplaceRequestParam {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -68,15 +68,6 @@ public class OnCallReplaceRequestParam {
   public CallSetting getOpt() {
     long cPtr = pjsua2JNI.OnCallReplaceRequestParam_opt_get(swigCPtr, this);
     return (cPtr == 0) ? null : new CallSetting(cPtr, false);
-  }
-
-  public void setNewCall(Call value) {
-    pjsua2JNI.OnCallReplaceRequestParam_newCall_set(swigCPtr, this, Call.getCPtr(value), value);
-  }
-
-  public Call getNewCall() {
-    long cPtr = pjsua2JNI.OnCallReplaceRequestParam_newCall_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new Call(cPtr, false);
   }
 
   public OnCallReplaceRequestParam() {

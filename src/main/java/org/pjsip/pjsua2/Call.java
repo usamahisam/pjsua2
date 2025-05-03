@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class Call {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
@@ -22,6 +21,7 @@ public class Call {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -186,14 +186,6 @@ public class Call {
 
   public void vidSetStream(int op, CallVidSetStreamParam param) throws java.lang.Exception {
     pjsua2JNI.Call_vidSetStream(swigCPtr, this, op, CallVidSetStreamParam.getCPtr(param), param);
-  }
-
-  public void vidStreamModifyCodecParam(int med_idx, VidCodecParam param) throws java.lang.Exception {
-    pjsua2JNI.Call_vidStreamModifyCodecParam(swigCPtr, this, med_idx, VidCodecParam.getCPtr(param), param);
-  }
-
-  public void audStreamModifyCodecParam(int med_idx, CodecParam param) throws java.lang.Exception {
-    pjsua2JNI.Call_audStreamModifyCodecParam(swigCPtr, this, med_idx, CodecParam.getCPtr(param), param);
   }
 
   public StreamInfo getStreamInfo(long med_idx) throws java.lang.Exception {

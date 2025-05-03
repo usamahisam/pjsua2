@@ -21,6 +21,7 @@ public class StreamInfo {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -89,22 +90,6 @@ public class StreamInfo {
 
   public long getRxPt() {
     return pjsua2JNI.StreamInfo_rxPt_get(swigCPtr, this);
-  }
-
-  public void setAudTxEventPt(int value) {
-    pjsua2JNI.StreamInfo_audTxEventPt_set(swigCPtr, this, value);
-  }
-
-  public int getAudTxEventPt() {
-    return pjsua2JNI.StreamInfo_audTxEventPt_get(swigCPtr, this);
-  }
-
-  public void setAudRxEventPt(int value) {
-    pjsua2JNI.StreamInfo_audRxEventPt_set(swigCPtr, this, value);
-  }
-
-  public int getAudRxEventPt() {
-    return pjsua2JNI.StreamInfo_audRxEventPt_get(swigCPtr, this);
   }
 
   public void setCodecName(String value) {

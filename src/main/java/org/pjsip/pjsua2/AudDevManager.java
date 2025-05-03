@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class AudDevManager {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;

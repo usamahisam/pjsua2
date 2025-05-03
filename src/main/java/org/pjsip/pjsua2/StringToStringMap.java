@@ -21,6 +21,7 @@ public class StringToStringMap extends java.util.AbstractMap<String, String> {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -144,6 +145,7 @@ public class StringToStringMap extends java.util.AbstractMap<String, String> {
       return (obj == null) ? 0 : obj.swigCPtr;
     }
   
+    @SuppressWarnings("deprecation")
     protected void finalize() {
       delete();
     }

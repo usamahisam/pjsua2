@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class AccountNatConfig extends PersistentObject {
   private transient long swigCPtr;
 
@@ -21,6 +20,7 @@ public class AccountNatConfig extends PersistentObject {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -50,22 +50,6 @@ public class AccountNatConfig extends PersistentObject {
 
   public int getMediaStunUse() {
     return pjsua2JNI.AccountNatConfig_mediaStunUse_get(swigCPtr, this);
-  }
-
-  public void setSipUpnpUse(int value) {
-    pjsua2JNI.AccountNatConfig_sipUpnpUse_set(swigCPtr, this, value);
-  }
-
-  public int getSipUpnpUse() {
-    return pjsua2JNI.AccountNatConfig_sipUpnpUse_get(swigCPtr, this);
-  }
-
-  public void setMediaUpnpUse(int value) {
-    pjsua2JNI.AccountNatConfig_mediaUpnpUse_set(swigCPtr, this, value);
-  }
-
-  public int getMediaUpnpUse() {
-    return pjsua2JNI.AccountNatConfig_mediaUpnpUse_get(swigCPtr, this);
   }
 
   public void setNat64Opt(int value) {

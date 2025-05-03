@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class AccountSipConfig extends PersistentObject {
   private transient long swigCPtr;
 
@@ -21,6 +20,7 @@ public class AccountSipConfig extends PersistentObject {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -100,14 +100,6 @@ public class AccountSipConfig extends PersistentObject {
 
   public int getTransportId() {
     return pjsua2JNI.AccountSipConfig_transportId_get(swigCPtr, this);
-  }
-
-  public void setIpv6Use(int value) {
-    pjsua2JNI.AccountSipConfig_ipv6Use_set(swigCPtr, this, value);
-  }
-
-  public int getIpv6Use() {
-    return pjsua2JNI.AccountSipConfig_ipv6Use_get(swigCPtr, this);
   }
 
   public void readObject(ContainerNode node) throws java.lang.Exception {

@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class AccountRegConfig extends PersistentObject {
   private transient long swigCPtr;
 
@@ -21,6 +20,7 @@ public class AccountRegConfig extends PersistentObject {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -139,6 +139,14 @@ public class AccountRegConfig extends PersistentObject {
 
   public long getProxyUse() {
     return pjsua2JNI.AccountRegConfig_proxyUse_get(swigCPtr, this);
+  }
+
+  public void setCallID(String value) {
+    pjsua2JNI.AccountRegConfig_callID_set(swigCPtr, this, value);
+  }
+
+  public String getCallID() {
+    return pjsua2JNI.AccountRegConfig_callID_get(swigCPtr, this);
   }
 
   public void readObject(ContainerNode node) throws java.lang.Exception {

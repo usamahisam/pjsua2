@@ -21,6 +21,7 @@ public class ToneDescVector extends java.util.AbstractList<ToneDesc> implements 
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

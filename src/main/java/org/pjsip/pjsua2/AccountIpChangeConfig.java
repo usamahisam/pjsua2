@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class AccountIpChangeConfig {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
@@ -22,6 +21,7 @@ public class AccountIpChangeConfig {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -58,14 +58,6 @@ public class AccountIpChangeConfig {
 
   public long getReinviteFlags() {
     return pjsua2JNI.AccountIpChangeConfig_reinviteFlags_get(swigCPtr, this);
-  }
-
-  public void setReinvUseUpdate(long value) {
-    pjsua2JNI.AccountIpChangeConfig_reinvUseUpdate_set(swigCPtr, this, value);
-  }
-
-  public long getReinvUseUpdate() {
-    return pjsua2JNI.AccountIpChangeConfig_reinvUseUpdate_get(swigCPtr, this);
   }
 
   public void readObject(ContainerNode node) throws java.lang.Exception {

@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class CodecParamSetting {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
@@ -22,6 +21,7 @@ public class CodecParamSetting {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -100,30 +100,6 @@ public class CodecParamSetting {
   public CodecFmtpVector getDecFmtp() {
     long cPtr = pjsua2JNI.CodecParamSetting_decFmtp_get(swigCPtr, this);
     return (cPtr == 0) ? null : new CodecFmtpVector(cPtr, false);
-  }
-
-  public void setPacketLoss(long value) {
-    pjsua2JNI.CodecParamSetting_packetLoss_set(swigCPtr, this, value);
-  }
-
-  public long getPacketLoss() {
-    return pjsua2JNI.CodecParamSetting_packetLoss_get(swigCPtr, this);
-  }
-
-  public void setComplexity(long value) {
-    pjsua2JNI.CodecParamSetting_complexity_set(swigCPtr, this, value);
-  }
-
-  public long getComplexity() {
-    return pjsua2JNI.CodecParamSetting_complexity_get(swigCPtr, this);
-  }
-
-  public void setCbr(boolean value) {
-    pjsua2JNI.CodecParamSetting_cbr_set(swigCPtr, this, value);
-  }
-
-  public boolean getCbr() {
-    return pjsua2JNI.CodecParamSetting_cbr_get(swigCPtr, this);
   }
 
   public CodecParamSetting() {

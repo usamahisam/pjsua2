@@ -21,6 +21,7 @@ public class RtcpFbCapVector extends java.util.AbstractList<RtcpFbCap> implement
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

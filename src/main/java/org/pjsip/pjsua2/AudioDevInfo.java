@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class AudioDevInfo {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
@@ -22,6 +21,7 @@ public class AudioDevInfo {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -34,14 +34,6 @@ public class AudioDevInfo {
       }
       swigCPtr = 0;
     }
-  }
-
-  public void setId(SWIGTYPE_p_pjmedia_aud_dev_index value) {
-    pjsua2JNI.AudioDevInfo_id_set(swigCPtr, this, SWIGTYPE_p_pjmedia_aud_dev_index.getCPtr(value));
-  }
-
-  public SWIGTYPE_p_pjmedia_aud_dev_index getId() {
-    return new SWIGTYPE_p_pjmedia_aud_dev_index(pjsua2JNI.AudioDevInfo_id_get(swigCPtr, this), true);
   }
 
   public void setName(String value) {

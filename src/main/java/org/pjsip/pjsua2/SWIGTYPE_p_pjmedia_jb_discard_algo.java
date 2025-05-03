@@ -9,7 +9,7 @@
 package org.pjsip.pjsua2;
 
 public class SWIGTYPE_p_pjmedia_jb_discard_algo {
-  private final transient long swigCPtr;
+  private transient long swigCPtr;
 
   protected SWIGTYPE_p_pjmedia_jb_discard_algo(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
     swigCPtr = cPtr;

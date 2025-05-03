@@ -20,6 +20,7 @@ public class ToneDesc extends pjmedia_tone_desc {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

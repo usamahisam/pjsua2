@@ -21,6 +21,7 @@ public class VideoDevInfoVector2 extends java.util.AbstractList<VideoDevInfo> im
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

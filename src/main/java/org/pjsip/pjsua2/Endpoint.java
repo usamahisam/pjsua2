@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class Endpoint {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
@@ -22,6 +21,7 @@ public class Endpoint {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -275,6 +275,14 @@ public class Endpoint {
     pjsua2JNI.Endpoint_resetVideoCodecParam(swigCPtr, this, codec_id);
   }
 
+  public CodecOpusConfig getCodecOpusConfig() throws java.lang.Exception {
+    return new CodecOpusConfig(pjsua2JNI.Endpoint_getCodecOpusConfig(swigCPtr, this), true);
+  }
+
+  public void setCodecOpusConfig(CodecOpusConfig opus_cfg) throws java.lang.Exception {
+    pjsua2JNI.Endpoint_setCodecOpusConfig(swigCPtr, this, CodecOpusConfig.getCPtr(opus_cfg), opus_cfg);
+  }
+
   public StringVector srtpCryptoEnum() throws java.lang.Exception {
     return new StringVector(pjsua2JNI.Endpoint_srtpCryptoEnum(swigCPtr, this), true);
   }
@@ -313,10 +321,6 @@ public class Endpoint {
 
   public int onCredAuth(OnCredAuthParam prm) {
     return (getClass() == Endpoint.class) ? pjsua2JNI.Endpoint_onCredAuth(swigCPtr, this, OnCredAuthParam.getCPtr(prm), prm) : pjsua2JNI.Endpoint_onCredAuthSwigExplicitEndpoint(swigCPtr, this, OnCredAuthParam.getCPtr(prm), prm);
-  }
-
-  public void onRejectedIncomingCall(OnRejectedIncomingCallParam prm) {
-    if (getClass() == Endpoint.class) pjsua2JNI.Endpoint_onRejectedIncomingCall(swigCPtr, this, OnRejectedIncomingCallParam.getCPtr(prm), prm); else pjsua2JNI.Endpoint_onRejectedIncomingCallSwigExplicitEndpoint(swigCPtr, this, OnRejectedIncomingCallParam.getCPtr(prm), prm);
   }
 
 }

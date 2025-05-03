@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL*/
 public class JsonDocument extends PersistentDocument {
   private transient long swigCPtr;
 
@@ -21,6 +20,7 @@ public class JsonDocument extends PersistentDocument {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

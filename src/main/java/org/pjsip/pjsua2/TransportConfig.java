@@ -20,6 +20,7 @@ public class TransportConfig extends PersistentObject {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -49,14 +50,6 @@ public class TransportConfig extends PersistentObject {
 
   public long getPortRange() {
     return pjsua2JNI.TransportConfig_portRange_get(swigCPtr, this);
-  }
-
-  public void setRandomizePort(boolean value) {
-    pjsua2JNI.TransportConfig_randomizePort_set(swigCPtr, this, value);
-  }
-
-  public boolean getRandomizePort() {
-    return pjsua2JNI.TransportConfig_randomizePort_get(swigCPtr, this);
   }
 
   public void setPublicAddress(String value) {

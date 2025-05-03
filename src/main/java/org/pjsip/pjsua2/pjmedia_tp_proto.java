@@ -10,7 +10,7 @@ package org.pjsip.pjsua2;
 
 public final class pjmedia_tp_proto {
   public final static int PJMEDIA_TP_PROTO_NONE = 0;
-  public final static int PJMEDIA_TP_PROTO_UNKNOWN = 1;
+  public final static int PJMEDIA_TP_PROTO_UNKNOWN = 1 << 0;
   public final static int PJMEDIA_TP_PROTO_UDP = 1 << 1;
   public final static int PJMEDIA_TP_PROTO_RTP = 1 << 2;
   public final static int PJMEDIA_TP_PROTO_DTLS = 1 << 3;

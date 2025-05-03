@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class AccountMediaConfig extends PersistentObject {
   private transient long swigCPtr;
 
@@ -21,6 +20,7 @@ public class AccountMediaConfig extends PersistentObject {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -109,14 +109,6 @@ public class AccountMediaConfig extends PersistentObject {
   public RtcpFbConfig getRtcpFbConfig() {
     long cPtr = pjsua2JNI.AccountMediaConfig_rtcpFbConfig_get(swigCPtr, this);
     return (cPtr == 0) ? null : new RtcpFbConfig(cPtr, false);
-  }
-
-  public void setRtcpXrEnabled(boolean value) {
-    pjsua2JNI.AccountMediaConfig_rtcpXrEnabled_set(swigCPtr, this, value);
-  }
-
-  public boolean getRtcpXrEnabled() {
-    return pjsua2JNI.AccountMediaConfig_rtcpXrEnabled_get(swigCPtr, this);
   }
 
   public void setUseLoopMedTp(boolean value) {

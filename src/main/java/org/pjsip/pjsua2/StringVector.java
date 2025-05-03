@@ -21,6 +21,7 @@ public class StringVector extends java.util.AbstractList<String> implements java
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

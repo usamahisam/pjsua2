@@ -20,6 +20,7 @@ public class UaConfig extends PersistentObject {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -124,22 +125,6 @@ public class UaConfig extends PersistentObject {
 
   public boolean getMwiUnsolicitedEnabled() {
     return pjsua2JNI.UaConfig_mwiUnsolicitedEnabled_get(swigCPtr, this);
-  }
-
-  public void setEnableUpnp(boolean value) {
-    pjsua2JNI.UaConfig_enableUpnp_set(swigCPtr, this, value);
-  }
-
-  public boolean getEnableUpnp() {
-    return pjsua2JNI.UaConfig_enableUpnp_get(swigCPtr, this);
-  }
-
-  public void setUpnpIfName(String value) {
-    pjsua2JNI.UaConfig_upnpIfName_set(swigCPtr, this, value);
-  }
-
-  public String getUpnpIfName() {
-    return pjsua2JNI.UaConfig_upnpIfName_get(swigCPtr, this);
   }
 
   public UaConfig() {

@@ -21,6 +21,7 @@ public class SipTxOption {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -41,14 +42,6 @@ public class SipTxOption {
 
   public String getTargetUri() {
     return pjsua2JNI.SipTxOption_targetUri_get(swigCPtr, this);
-  }
-
-  public void setLocalUri(String value) {
-    pjsua2JNI.SipTxOption_localUri_set(swigCPtr, this, value);
-  }
-
-  public String getLocalUri() {
-    return pjsua2JNI.SipTxOption_localUri_get(swigCPtr, this);
   }
 
   public void setHeaders(SipHeaderVector value) {

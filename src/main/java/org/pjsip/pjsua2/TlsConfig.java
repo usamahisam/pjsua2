@@ -20,6 +20,7 @@ public class TlsConfig extends PersistentObject {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -171,14 +172,6 @@ public class TlsConfig extends PersistentObject {
 
   public boolean getQosIgnoreError() {
     return pjsua2JNI.TlsConfig_qosIgnoreError_get(swigCPtr, this);
-  }
-
-  public void setEnableRenegotiation(boolean value) {
-    pjsua2JNI.TlsConfig_enableRenegotiation_set(swigCPtr, this, value);
-  }
-
-  public boolean getEnableRenegotiation() {
-    return pjsua2JNI.TlsConfig_enableRenegotiation_get(swigCPtr, this);
   }
 
   public TlsConfig() {

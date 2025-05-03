@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class MediaEventData {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
@@ -22,6 +21,7 @@ public class MediaEventData {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -52,6 +52,15 @@ public class MediaEventData {
   public AudDevErrorEvent getAudDevError() {
     long cPtr = pjsua2JNI.MediaEventData_audDevError_get(swigCPtr, this);
     return (cPtr == 0) ? null : new AudDevErrorEvent(cPtr, false);
+  }
+
+  public void setRtcpFb(RtcpFbEvent value) {
+    pjsua2JNI.MediaEventData_rtcpFb_set(swigCPtr, this, RtcpFbEvent.getCPtr(value), value);
+  }
+
+  public RtcpFbEvent getRtcpFb() {
+    long cPtr = pjsua2JNI.MediaEventData_rtcpFb_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new RtcpFbEvent(cPtr, false);
   }
 
   public void setPtr(SWIGTYPE_p_void value) {

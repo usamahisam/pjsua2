@@ -21,6 +21,7 @@ public class ToneDigitMapVector extends java.util.AbstractList<ToneDigitMapDigit
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

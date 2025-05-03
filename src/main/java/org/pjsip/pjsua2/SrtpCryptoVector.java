@@ -21,6 +21,7 @@ public class SrtpCryptoVector extends java.util.AbstractList<SrtpCrypto> impleme
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

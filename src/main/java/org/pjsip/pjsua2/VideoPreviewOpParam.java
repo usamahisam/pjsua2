@@ -21,6 +21,7 @@ public class VideoPreviewOpParam {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -59,13 +60,13 @@ public class VideoPreviewOpParam {
     return pjsua2JNI.VideoPreviewOpParam_windowFlags_get(swigCPtr, this);
   }
 
-  public void setFormat(MediaFormatVideo value) {
-    pjsua2JNI.VideoPreviewOpParam_format_set(swigCPtr, this, MediaFormatVideo.getCPtr(value), value);
+  public void setFormat(MediaFormat value) {
+    pjsua2JNI.VideoPreviewOpParam_format_set(swigCPtr, this, MediaFormat.getCPtr(value), value);
   }
 
-  public MediaFormatVideo getFormat() {
+  public MediaFormat getFormat() {
     long cPtr = pjsua2JNI.VideoPreviewOpParam_format_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new MediaFormatVideo(cPtr, false);
+    return (cPtr == 0) ? null : new MediaFormat(cPtr, false);
   }
 
   public void setWindow(VideoWindowHandle value) {

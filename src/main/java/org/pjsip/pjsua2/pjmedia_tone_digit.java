@@ -21,6 +21,7 @@ public class pjmedia_tone_digit {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

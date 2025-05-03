@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class CodecParamInfo {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
@@ -22,6 +21,7 @@ public class CodecParamInfo {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -82,30 +82,6 @@ public class CodecParamInfo {
 
   public long getFrameLen() {
     return pjsua2JNI.CodecParamInfo_frameLen_get(swigCPtr, this);
-  }
-
-  public void setFrameLenDenum(long value) {
-    pjsua2JNI.CodecParamInfo_frameLenDenum_set(swigCPtr, this, value);
-  }
-
-  public long getFrameLenDenum() {
-    return pjsua2JNI.CodecParamInfo_frameLenDenum_get(swigCPtr, this);
-  }
-
-  public void setEncFrameLen(long value) {
-    pjsua2JNI.CodecParamInfo_encFrameLen_set(swigCPtr, this, value);
-  }
-
-  public long getEncFrameLen() {
-    return pjsua2JNI.CodecParamInfo_encFrameLen_get(swigCPtr, this);
-  }
-
-  public void setEncFrameLenDenum(long value) {
-    pjsua2JNI.CodecParamInfo_encFrameLenDenum_set(swigCPtr, this, value);
-  }
-
-  public long getEncFrameLenDenum() {
-    return pjsua2JNI.CodecParamInfo_encFrameLenDenum_get(swigCPtr, this);
   }
 
   public void setPcmBitsPerSample(long value) {

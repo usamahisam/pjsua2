@@ -10,7 +10,7 @@ package org.pjsip.pjsua2;
 
 public final class pj_ssl_sock_proto {
   public final static int PJ_SSL_SOCK_PROTO_DEFAULT = 0;
-  public final static int PJ_SSL_SOCK_PROTO_SSL2 = 1;
+  public final static int PJ_SSL_SOCK_PROTO_SSL2 = 1 << 0;
   public final static int PJ_SSL_SOCK_PROTO_SSL3 = 1 << 1;
   public final static int PJ_SSL_SOCK_PROTO_TLS1 = 1 << 2;
   public final static int PJ_SSL_SOCK_PROTO_TLS1_1 = 1 << 3;

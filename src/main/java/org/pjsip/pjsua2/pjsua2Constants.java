@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public interface pjsua2Constants {
   public final static int INVALID_ID = -1;
   public final static int SUCCESS = 0;

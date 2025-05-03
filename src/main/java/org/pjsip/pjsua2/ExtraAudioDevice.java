@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class ExtraAudioDevice extends AudioMedia {
   private transient long swigCPtr;
 
@@ -21,6 +20,7 @@ public class ExtraAudioDevice extends AudioMedia {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -44,7 +44,7 @@ public class ExtraAudioDevice extends AudioMedia {
     pjsua2JNI.ExtraAudioDevice_open(swigCPtr, this);
   }
 
-  public void close() throws java.lang.Exception {
+  public void close() {
     pjsua2JNI.ExtraAudioDevice_close(swigCPtr, this);
   }
 

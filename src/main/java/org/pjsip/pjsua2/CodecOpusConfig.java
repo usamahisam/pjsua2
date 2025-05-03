@@ -8,7 +8,6 @@
 
 package org.pjsip.pjsua2;
 
-/** @noinspection ALL */
 public class CodecOpusConfig {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
@@ -22,6 +21,7 @@ public class CodecOpusConfig {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
@@ -58,14 +58,6 @@ public class CodecOpusConfig {
 
   public long getFrm_ptime() {
     return pjsua2JNI.CodecOpusConfig_frm_ptime_get(swigCPtr, this);
-  }
-
-  public void setFrm_ptime_denum(long value) {
-    pjsua2JNI.CodecOpusConfig_frm_ptime_denum_set(swigCPtr, this, value);
-  }
-
-  public long getFrm_ptime_denum() {
-    return pjsua2JNI.CodecOpusConfig_frm_ptime_denum_get(swigCPtr, this);
   }
 
   public void setBit_rate(long value) {

@@ -21,6 +21,7 @@ public class ToneDigitVector extends java.util.AbstractList<ToneDigit> implement
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

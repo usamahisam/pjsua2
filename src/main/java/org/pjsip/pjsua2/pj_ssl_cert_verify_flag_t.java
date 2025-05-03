@@ -10,7 +10,7 @@ package org.pjsip.pjsua2;
 
 public final class pj_ssl_cert_verify_flag_t {
   public final static int PJ_SSL_CERT_ESUCCESS = 0;
-  public final static int PJ_SSL_CERT_EISSUER_NOT_FOUND = 1;
+  public final static int PJ_SSL_CERT_EISSUER_NOT_FOUND = 1 << 0;
   public final static int PJ_SSL_CERT_EUNTRUSTED = 1 << 1;
   public final static int PJ_SSL_CERT_EVALIDITY_PERIOD = 1 << 2;
   public final static int PJ_SSL_CERT_EINVALID_FORMAT = 1 << 3;

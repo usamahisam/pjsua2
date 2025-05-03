@@ -21,6 +21,7 @@ public class SslCertNameVector extends java.util.AbstractList<SslCertName> imple
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }

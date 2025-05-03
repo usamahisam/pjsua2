@@ -21,6 +21,7 @@ public class SipHeaderVector extends java.util.AbstractList<SipHeader> implement
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
+  @SuppressWarnings("deprecation")
   protected void finalize() {
     delete();
   }
